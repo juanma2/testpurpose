@@ -1,6 +1,6 @@
 node {
    echo 'start the PL'
    sh 'ls -lastrh'   
-   printenv
-   echo GIT_BRANCH
+   sh 'printenv'
+   echo GIT_BRANCH %GIT_BRANCH%
 }
