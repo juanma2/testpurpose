@@ -1,6 +1,7 @@
 node {
    echo 'start the PL'
    sh 'ls -lastrh'   
-   sh 'printenv'
    echo 'BRANCH_NAME %BRANCH_NAME%'
+   mybranch =  %BRANCH_NAME%
+   triggerRemoteJob parameterFactories: [[$class: 'SimpleString', name: 'branch_name', value: mybranch ]], remotePathMissing: [$class: 'StopAsFailure'], remotePathUrl: 'jenkins://e83e2ecadb47cb22d5817ddaa5add029/ajobtobetrigger'
 }
