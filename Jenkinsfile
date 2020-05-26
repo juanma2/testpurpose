@@ -1,5 +1,3 @@
-@Library('es-shared-library') _
-
 pipeline {
   agent any
   stages {
@@ -13,7 +11,7 @@ pipeline {
 
         stage('step 2') {
           steps {
-            sh '''echo "done 2"
+            sh '''echo "done 2, and the library is gone"
 '''
           }
         }
