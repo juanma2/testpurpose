@@ -1,10 +1,13 @@
-@Library('shared-library-test') _
+@Library('es-shared-library') _
 
+pipeline {
+   agent any
 
-node {
-   echo 'start the PL'
-   sh 'ls -lastrh'   
-   echo 'BRANCH_NAME ${BRANCH_NAME}'
-   mybranch =  env.BRANCH_NAME
-   sh 'echo "coolio!!"'   
+   stages {
+      stage('Hello') {
+         steps {
+            echo 'Hello World'
+         }
+      }
+   }
 }
