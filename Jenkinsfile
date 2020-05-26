@@ -1,3 +1,5 @@
+@Library('es-shared-library') _
+
 pipeline {
   agent any
   stages {
