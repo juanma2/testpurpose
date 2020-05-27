@@ -1,5 +1,5 @@
 pipeline {
-  def library = library('es-shared-library')
+  library 'es-shared-library@master'
 
   agent any
   stages {
