@@ -1,4 +1,6 @@
 pipeline {
+  library 'es-shared-library@master'
+
   agent any
   stages {
     stage('Hello') {
