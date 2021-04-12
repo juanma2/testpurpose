@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    stages {
+        stage('Collect Data') {
+            steps {
+                sh 'echo "do something"'
+            }
+        }
+        stage('Test A') {
+            steps {
+                sh 'echo "do something in test A"'
+                sh 'for i in $(seq 1 30); do echo $i; sleep 1 ; done'                
+            }
+        }
+    }
+}
